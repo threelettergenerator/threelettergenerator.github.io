@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="author" content="Askedland youtube.com/@askedland askedland_ on discord">
+    <title>Custom 3 letter username generator</title>
+  </head>
+  <body>
+    <div class="start">
+      <h2>Want a cool 3 letter username? Well here you can generate it</h2>
+    </div>
+    <div class="generatebuttondiv">
+      <button style="background: #D3D3D3; color: black; border: white; align-items: center; display: block; margin: 15 auto 0 auto; padding: 10px 16px; align-items; center;" onclick="generate()">Generate</button>
+    </div>
+    <p style="font-size: 25px;" id="generatedusrname"></p>
+    <footer style="text-align: center;">Askedland all rights reserved <a href="https://github.com/threelettergenerator/threelettergenerator/blob/index.html">Edit this page</a></footer>
+    <style>
+      .start{
+        text-align: center;
+        background-color: #c0c0c0
+      }
+      .generatebuttondiv{
+        text-align: center;
+        font-size: 15px;
+      }
+    </style>
+  </body>
+  <script>
+    function generate() {
+        const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+        let username = '';
+        
+        for (let i = 0; i < 3; i++) {
+            const randomIndex = Math.floor(Math.random() * chars.length);
+            username += chars[randomIndex];
+        }
+        document.getElementById("generatedusrname").innerText = username;
+    }
+  </script>
+</html>
